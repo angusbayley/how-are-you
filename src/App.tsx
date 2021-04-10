@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import StatusBar from './components/StatusBar'
+import NeedsPanel from './components/NeedsPanel'
 
 function App() {
   return (
@@ -12,7 +12,7 @@ function App() {
         </p>
       </header>
       <hr/>
-      <StatusBar/>
+      <NeedsPanel/>
     </div>
   );
 }
