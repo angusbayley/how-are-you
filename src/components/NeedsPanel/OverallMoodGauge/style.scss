@@ -1,0 +1,63 @@
+.overall-mood-gauge {
+  height: 133px;
+  width: 50px;
+}
+
+.overall-mood-gauge__positive-container {
+  height: 134px;
+  background-color: rgba(91, 101, 164, 1);
+  position: relative;
+}
+
+.overall-mood-gauge__negative-container {
+  height: 134px;
+  background-color: rgba(91, 101, 164, 1);
+}
+
+.overall-mood-gauge__positive {
+  background: linear-gradient(0deg, rgba(56, 240, 51, 1) 0%, rgba(187, 251, 154, 1) 50%, rgba(56, 240, 51, 1) 100%);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 30px;
+}
+
+.overall-mood-gauge__negative {
+  background-color: red;
+  height: 30px;
+}
+
+.overall-mood-gauge__positive-reflection-spot {
+  position: absolute;
+  top: -3px;
+  left: 5px;
+  width: 20px;
+  height: 20px;
+  background: rgba(255,255,255,0.9);
+  filter: blur(5px);
+  border-radius: 1000px;
+}
+
+.overall-mood-gauge__positive-reflection-line {
+  position: absolute;
+  top: 20px;
+  left: -180px;
+  width: 200px;
+  height: 235px;
+  background: rgba(255,255,255,0.2);
+  filter: blur(2px);
+  border-radius: 1000px 10px;
+  transform: rotate(-1deg)
+}
+
+.overall-mood-gauge__negative-reflection-line {
+  position: absolute;
+  top: 133px;
+  left: -100px;
+  width: 200px;
+  height: 235px;
+  background: rgba(255,255,255,0.2);
+  filter: blur(2px);
+  border-radius: 1000px 10px;
+  transform: rotate(2deg)
+}

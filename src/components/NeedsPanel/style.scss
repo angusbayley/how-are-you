@@ -1,0 +1,31 @@
+.needs-panel {
+  width: fit-content;
+  margin: auto;
+  position: relative;
+}
+
+.needs-panel__title {
+  position: absolute;
+  top: 13px;
+  padding: 0px 375px;
+  font-family: Benguiat;
+  font-size: 37px;
+  color: rgba(15, 24, 108, 1)
+}
+
+.needs-panel__needs-grid-container {
+  position: absolute;
+  top: 55px;
+  padding: 0px 200px;
+}
+
+.needs-panel__mood-gauge-container {
+  position: absolute;
+  top: 13px;
+  padding: 0px 85px;
+  z-index: -1;
+}
+
+img {
+  filter: drop-shadow(-2px 0px 5px rgba(100,100,100,0.9));
+}
