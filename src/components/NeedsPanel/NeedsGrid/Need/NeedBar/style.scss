@@ -1,3 +1,7 @@
+.need-bar__body {
+  position: relative;
+}
+
 .need-bar__bar {
   width: 185px;
   height: 15px;
@@ -7,6 +11,7 @@
   overflow: hidden;
   box-shadow: 1px 1px 3px rgba(0,0,0,0.4);
   position: relative;
+  cursor: pointer;
 }
 
 .need-bar__border {
@@ -56,4 +61,15 @@
   height: 100%;
   width: 55%;
   border-right: 4px solid black;
+}
+
+.need-bar__handle {
+  position: absolute;
+  top: -4px;
+  height: 25px;
+  width: 25px;
+  border-radius: 1000px;
+  background-color: white;
+  visibility: hidden;
+  cursor: pointer;
 }

@@ -14,7 +14,7 @@ type NeedsValuesType = {
 }
 
 const NeedsPanel = () => {
-  const DEFAULT_VALUE = 0.4;
+  const DEFAULT_VALUE = 0.7;
   const needsValues = {} as NeedsValuesType
   // TODO: better way to set this?
   const [hungerValue, setHungerValue] = useState(DEFAULT_VALUE);

@@ -1,4 +1,4 @@
-import React from "react";
+import React, {DragEventHandler} from "react";
 import "./style.scss";
 
 type NeedBarPropsType = {
@@ -14,7 +14,7 @@ const NeedBar = (props: NeedBarPropsType) => {
 
   const handleBarDrag = (e: any) => {
     // : DragEventHandler<HTMLDivElement>
-    // last event of drag event stream has a clientX of 0 if you drop on another element, we don't want this
+    // last event of drag event stream has a screenX of 0 if you drop on another element, we don't want this
     if (e.screenX === 0) return;
     // @ts-ignore
     const boundingRect = e.target.getBoundingClientRect();
@@ -33,13 +33,14 @@ const NeedBar = (props: NeedBarPropsType) => {
 
   return (
     <div className="need-bar__body">
-      <div className="need-bar__bar">
+      <div className="need-bar__bar" draggable="true" onClick={handleBarDrag} onDrag={handleBarDrag} onDragStart={handleDragStart}>
         <div className="need-bar__left-highlight"></div>
         <div className="need-bar__reflection"></div>
         <div className="need-bar__reflection-blur"></div>
-        <div className="need-bar__inner-green"></div>
+        <div className="need-bar__inner-green" style={{width: `${width}%`}}></div>
         <div className="need-bar__border"></div>
       </div>
+      {/*<div className="need-bar__handle" style={{left: `${width - (handleWidth/4)}%`}}/>*/}
     </div>
   )
 }

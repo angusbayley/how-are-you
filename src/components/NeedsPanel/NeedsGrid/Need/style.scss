@@ -3,6 +3,10 @@
   margin-bottom: 10px;
 }
 
+.need:hover .need-bar__handle {
+  visibility: initial;
+}
+
 .need__need-title {
   font-family: Benguiat;
   font-size: 25px;
