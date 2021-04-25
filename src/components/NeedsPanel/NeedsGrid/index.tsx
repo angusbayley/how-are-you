@@ -14,38 +14,30 @@ const NeedsGrid = (props: NeedsGridPropsType) => {
       <div className="needs-grid__needs-column">
         <Need
           needType="Hunger"
-          value={needsValues.hunger.value}
-          setValue={needsValues.hunger.setValue}/>
+          states={needsValues.hunger}/>
         <Need
           needType="Comfort"
-          value={needsValues.comfort.value}
-          setValue={needsValues.comfort.setValue}/>
+          states={needsValues.comfort}/>
         <Need
           needType="Bladder"
-          value={needsValues.bladder.value}
-          setValue={needsValues.bladder.setValue}/>
+          states={needsValues.bladder}/>
         <Need
           needType="Energy"
-          value={needsValues.energy.value}
-          setValue={needsValues.energy.setValue}/>
+          states={needsValues.energy}/>
       </div>
       <div className="needs-grid__needs-column">
         <Need
           needType="Fun"
-          value={needsValues.fun.value}
-          setValue={needsValues.fun.setValue}/>
+          states={needsValues.fun}/>
         <Need
           needType="Social"
-          value={needsValues.social.value}
-          setValue={needsValues.social.setValue}/>
+          states={needsValues.social}/>
         <Need
           needType="Hygiene"
-          value={needsValues.hygiene.value}
-          setValue={needsValues.hygiene.setValue}/>
+          states={needsValues.hygiene}/>
         <Need
           needType="Environment"
-          value={needsValues.environment.value}
-          setValue={needsValues.environment.setValue}/>
+          states={needsValues.environment}/>
       </div>
     </div>
   )

@@ -1,46 +1,52 @@
-import React, {DragEventHandler} from "react";
+import React, {DragEventHandler, useState, useEffect} from "react";
+import { NeedSetterType } from "./../../../../NeedsPanel";
 import "./style.scss";
 
-type NeedBarPropsType = {
-  value: number;
-  setValue: (value: number) => void;
-}
-
-const NeedBar = (props: NeedBarPropsType) => {
-  const { value, setValue } = props;
+const NeedBar = (props: { states: NeedSetterType }) => {
+  const {
+    value,
+    setValue,
+    isMouseDown,
+    setIsMouseDown,
+    dragClientX
+  } = props.states;
   const width = value * 100;
   const handleWidth = 25;
-  let dragCounter = 0;
+  const [boundingRectProps, setBoundingRectProps] = useState({x: null, width: null});
 
-  const handleBarDrag = (e: any) => {
-    // : DragEventHandler<HTMLDivElement>
-    // last event of drag event stream has a screenX of 0 if you drop on another element, we don't want this
-    if (e.screenX === 0) return;
-    // @ts-ignore
-    const boundingRect = e.target.getBoundingClientRect();
-    const newValue = (e.clientX - boundingRect.x) / boundingRect.width;
+  const setNewValueBasedOnMousePosition = (
+    dragClientX: null | number,
+    boundingRectProps: {x: null | number, width: null | number}
+  ) => {
+    if (!dragClientX || !boundingRectProps.x || !boundingRectProps.width) return;
+    const newValue = (dragClientX - boundingRectProps.x) / boundingRectProps.width;
     const cappedNewValue = Math.max(Math.min(newValue, 1), 0)
     setValue(cappedNewValue);
   }
 
-  const handleDragStart = (e: any) => {
-    // : DragEventHandler<HTMLDivElement>
-    // empty element overrides the ghost image that the HTML draggable API initiates
-    const el = document.createElement("div")
-    document.body.appendChild(el);
-    e.dataTransfer.setDragImage(el, 0, 0);
+  useEffect(() => {
+    if (isMouseDown) setNewValueBasedOnMousePosition(dragClientX, boundingRectProps);
+  });
+
+  const handleMouseDown = (e: any) => {
+    const boundingRect = e.target.getBoundingClientRect();
+    setBoundingRectProps({
+      x: boundingRect.x,
+      width: boundingRect.width
+    });
+    setIsMouseDown(true);
+    setNewValueBasedOnMousePosition(e.clientX, boundingRect);
   }
 
   return (
     <div className="need-bar__body">
-      <div className="need-bar__bar" draggable="true" onClick={handleBarDrag} onDrag={handleBarDrag} onDragStart={handleDragStart}>
+      <div className="need-bar__bar" onMouseDown={handleMouseDown}>
         <div className="need-bar__left-highlight"></div>
         <div className="need-bar__reflection"></div>
         <div className="need-bar__reflection-blur"></div>
         <div className="need-bar__inner-green" style={{width: `${width}%`}}></div>
         <div className="need-bar__border"></div>
       </div>
-      {/*<div className="need-bar__handle" style={{left: `${width - (handleWidth/4)}%`}}/>*/}
     </div>
   )
 }
