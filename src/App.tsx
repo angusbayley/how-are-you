@@ -10,7 +10,6 @@ function App() {
           How are you
         </p>
       </header>
-      <hr/>
       <NeedsPanel/>
     </div>
   );
