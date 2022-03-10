@@ -141,7 +141,7 @@ const NeedsPanel = () => {
       <div className="needs-panel__mood-gauge-container">
         <OverallMoodGauge mood={mood}/>
       </div>
-      <img src={panelBase} alt="panel" />
+      <object data={panelBase} />
       <div className="needs-panel__title">Needs</div>
       <div className="needs-panel__needs-grid-container">
         <NeedsGrid needsValues={needsValues}/>
