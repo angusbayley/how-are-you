@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import NeedsGrid from "./NeedsGrid";
 import OverallMoodGauge from "./OverallMoodGauge";
 import "./style.scss"
-import panelBase from "./panel-base.svg";
+import panelBase from "./panel-base-cleared.png";
 
 type NeedSetterType = {
   value: number,
@@ -141,7 +141,8 @@ const NeedsPanel = () => {
       <div className="needs-panel__mood-gauge-container">
         <OverallMoodGauge mood={mood}/>
       </div>
-      <object data={panelBase} />
+      <img src={panelBase} alt="panel" className="needs-panel__panel-base" width="735px"/>
+      {/*<object data={panelBase} />*/}
       <div className="needs-panel__title">Needs</div>
       <div className="needs-panel__needs-grid-container">
         <NeedsGrid needsValues={needsValues}/>

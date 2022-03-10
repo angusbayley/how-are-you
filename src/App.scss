@@ -8,12 +8,21 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  font-size: calc(10px + 1.5vmin);
+  font-family: "Benguiat", "Comic Sans", cursive;
+  color: #0f186c
 }
 
 hr {
   margin: 20px;
   border: none;
   border-top: 1px solid grey;
+}
+
+.download-button {
+  margin-top: 25px;
+  font-size: 1.2em;
+  padding: 5px 5px 0px 5px;
+  font-family: "Benguiat", "Comic Sans", cursive;
+  color: #0f186c
 }
