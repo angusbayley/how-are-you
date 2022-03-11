@@ -3,10 +3,9 @@
 }
 
 .need-bar__bar {
+  /* background overwritten by inline style, see component */
   width: 185px;
   height: 15px;
-  background: #777;
-  background: linear-gradient(0deg, #777 0%, #444 100%);
   border-radius: 11px 19px 11px 19px;
   overflow: hidden;
   box-shadow: 1px 1px 3px rgba(0,0,0,0.4);
@@ -60,8 +59,7 @@
 }
 
 .need-bar__inner-green {
-  background: rgba(40, 195, 82, 1);
-  background: linear-gradient(0deg, rgba(28,136,34,1) 0%, rgba(40, 195, 82, 1) 100%);
+  /* background overwritten by inline style, see component */
   height: 100%;
   width: 55%;
   border-right: 4px solid black;
