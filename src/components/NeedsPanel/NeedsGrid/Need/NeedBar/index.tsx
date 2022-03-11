@@ -1,4 +1,4 @@
-import React, {DragEventHandler, useState, useEffect} from "react";
+import React, {useState, useEffect} from "react";
 import { NeedSetterType } from "./../../../../NeedsPanel";
 import "./style.scss";
 
@@ -11,7 +11,6 @@ const NeedBar = (props: { states: NeedSetterType }) => {
     dragClientX
   } = props.states;
   const width = value * 100;
-  const handleWidth = 25;
   const [boundingRectProps, setBoundingRectProps] = useState({x: null, width: null});
 
   const setNewValueBasedOnMousePosition = (
@@ -60,8 +59,6 @@ const NeedBar = (props: { states: NeedSetterType }) => {
   const glb = linearInterpolate(119, 94, logBoostedValue);
 
   const logBoostedInverseValue = Math.log((1-value)+1)/0.7;
-  console.log(value)
-  console.log(logBoostedInverseValue);
 
   const ydr = reluInterpolate(68, 175, logBoostedInverseValue);
   const ydg = reluInterpolate(68, 156, logBoostedInverseValue);
