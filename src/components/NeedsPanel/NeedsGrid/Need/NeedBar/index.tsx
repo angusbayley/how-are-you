@@ -35,6 +35,7 @@ const NeedBar = (props: { states: NeedSetterType }) => {
     });
     setIsMouseDown(true);
     setNewValueBasedOnMousePosition(e.clientX, boundingRect);
+    e.preventDefault();
   }
 
   const linearInterpolate = (a: number, b: number, progress: number) => {
