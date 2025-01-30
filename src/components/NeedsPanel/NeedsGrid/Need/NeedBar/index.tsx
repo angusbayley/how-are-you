@@ -1,12 +1,9 @@
 import React, {useState, useEffect} from "react";
-import { NeedSetterType } from "./../../../../NeedsPanel";
+import { NeedStateType } from "./../../../../NeedsPanel";
 import "./style.scss";
 
-const NeedBar = (props: { states: NeedSetterType }) => {
-  const {
-    value,
-    setValue
-  } = props.states;
+const NeedBar = (props: { state: NeedStateType }) => {
+  const [value, setValue] = props.state;
   const width = value * 100;
   const [boundingRectProps, setBoundingRectProps] = useState({x: null, width: null});
   const [dragClientX, setDragClientX] = useState(null);

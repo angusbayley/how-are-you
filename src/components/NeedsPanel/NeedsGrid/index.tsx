@@ -1,43 +1,43 @@
 import React from "react";
 import Need from "./Need";
-import { NeedsValuesType } from "./../../NeedsPanel";
+import { NeedsStateType } from "./../../NeedsPanel";
 import "./style.scss";
 
 type NeedsGridPropsType = {
-  needsValues: NeedsValuesType;
+  needsState: NeedsStateType;
 }
 
 const NeedsGrid = (props: NeedsGridPropsType) => {
-  const { needsValues } = props
+  const { needsState } = props
   return (
     <div className="needs-grid">
       <div className="needs-grid__needs-column">
         <Need
-          needType="Hunger"
-          states={needsValues.hunger}/>
+          needName="Hunger"
+          state={needsState.hunger}/>
         <Need
-          needType="Comfort"
-          states={needsValues.comfort}/>
+          needName="Comfort"
+          state={needsState.comfort}/>
         <Need
-          needType="Bladder"
-          states={needsValues.bladder}/>
+          needName="Bladder"
+          state={needsState.bladder}/>
         <Need
-          needType="Energy"
-          states={needsValues.energy}/>
+          needName="Energy"
+          state={needsState.energy}/>
       </div>
       <div className="needs-grid__needs-column">
         <Need
-          needType="Fun"
-          states={needsValues.fun}/>
+          needName="Fun"
+          state={needsState.fun}/>
         <Need
-          needType="Social"
-          states={needsValues.social}/>
+          needName="Social"
+          state={needsState.social}/>
         <Need
-          needType="Hygiene"
-          states={needsValues.hygiene}/>
+          needName="Hygiene"
+          state={needsState.hygiene}/>
         <Need
-          needType="Environment"
-          states={needsValues.environment}/>
+          needName="Environment"
+          state={needsState.environment}/>
       </div>
     </div>
   )

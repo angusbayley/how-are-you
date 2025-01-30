@@ -1,19 +1,19 @@
 import React from "react";
 import NeedBar from "./NeedBar";
 import "./style.scss"
-import { NeedSetterType } from "./../../../NeedsPanel";
+import { NeedStateType } from "./../../../NeedsPanel";
 
 type NeedsPropsType = {
-  needType: String;
-  states: NeedSetterType
+  needName: String;
+  state: NeedStateType
 }
 
 const Need = (props: NeedsPropsType) => {
-  const { needType, states } = props;
+  const { needName, state } = props;
   return (
     <div className="need">
-      <div className="need__need-title">{needType}</div>
-      <NeedBar states={states}/>
+      <div className="need__need-title">{needName}</div>
+      <NeedBar state={state}/>
     </div>
   )
 }

@@ -1,13 +1,29 @@
 import React from "react";
 import "./style.scss";
+import { NeedsStateType, NeedStateType } from "./../../NeedsPanel";
 
 type PropsType = {
-  mood: number;
+  needsState: NeedsStateType
 }
 
 const OverallMoodGauge = (props: PropsType) => {
 
-  const { mood } = props;
+  const { needsState } = props;
+  
+  const get = (stateSetterAndGetter: NeedStateType) => {
+    return stateSetterAndGetter[0];
+  }
+
+  const mood = (
+    get(needsState["hunger"])
+    + get(needsState["comfort"])
+    + get(needsState["bladder"])
+    + get(needsState["energy"])
+    + get(needsState["fun"])
+    + get(needsState["social"])
+    + get(needsState["hygiene"])
+    + get(needsState["environment"])
+  ) / 8;
   const positiveHeight = Math.max(mood - 0.5, 0) * 2 * 100;
   const negativeHeight = Math.max(0.5 - mood, 0) * 2 * 100;
 
