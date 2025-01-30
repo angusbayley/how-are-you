@@ -5,13 +5,12 @@ import "./style.scss";
 const NeedBar = (props: { states: NeedSetterType }) => {
   const {
     value,
-    setValue,
-    isMouseDown,
-    setIsMouseDown,
-    dragClientX
+    setValue
   } = props.states;
   const width = value * 100;
   const [boundingRectProps, setBoundingRectProps] = useState({x: null, width: null});
+  const [dragClientX, setDragClientX] = useState(null);
+  const [isMouseDown, setIsMouseDown] = useState(false);
 
   const setNewValueBasedOnMousePosition = (
     dragClientX: null | number,
@@ -26,6 +25,32 @@ const NeedBar = (props: { states: NeedSetterType }) => {
   useEffect(() => {
     if (isMouseDown) setNewValueBasedOnMousePosition(dragClientX, boundingRectProps);
   });
+
+  useEffect(() => {
+    const handleOnMouseUp = (e: any) => {
+      setIsMouseDown(false);
+      setDragClientX(null);
+    }
+
+    const handleMouseMove = (e: any) => {
+      if (!isMouseDown) return;
+      setDragClientX(e.clientX);
+    }
+
+    if (isMouseDown) {
+      document.addEventListener("mousemove", handleMouseMove);
+      document.addEventListener("mouseup", handleOnMouseUp);
+      
+    } else {
+      document.removeEventListener("mousemove", handleMouseMove);
+      document.removeEventListener("mouseup", handleOnMouseUp);
+    }
+
+    return () => {
+      document.removeEventListener("mousemove", handleMouseMove);
+      document.removeEventListener("mouseup", handleOnMouseUp);
+    };
+  }, [isMouseDown]);
 
   const handleMouseDown = (e: any) => {
     const boundingRect = e.target.getBoundingClientRect();
@@ -72,7 +97,11 @@ const NeedBar = (props: { states: NeedSetterType }) => {
   const yellowBackgroundGradient = `linear-gradient(0deg, rgba(${ydr}, ${ydg}, ${ydb}, 1) 0%, rgba(${ylr}, ${ylg}, ${ylb}, 1) 40%)`
 
   return (
-    <div className="need-bar__body">
+    <div className="need-bar__body"
+      // onMouseUp={handleOnMouseUp}
+      // onMouseMove={handleMouseMove}
+      >
+      
       <div className="need-bar__bar" onMouseDown={handleMouseDown} style={{
         background: yellowBackgroundGradient
       }}>
