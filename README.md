@@ -3,7 +3,7 @@
 ## TODO
 
 [x] refactor, state mgmt and prop drilling
-[ ] needbar hover should stay active when click-dragging
+[x] needbar hover should stay active when click-dragging
 [ ] algorithm should be logit-function'd
 [ ] throttle mousemove events/sync state to browser refresh
 [ ] gross blue background

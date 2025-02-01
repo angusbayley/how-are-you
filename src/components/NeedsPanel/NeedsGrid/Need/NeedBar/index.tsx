@@ -99,7 +99,7 @@ const NeedBar = (props: { state: NeedStateType }) => {
       // onMouseMove={handleMouseMove}
       >
       
-      <div className="need-bar__bar" onMouseDown={handleMouseDown} style={{
+      <div className={`need-bar__bar ${isMouseDown ? 'active' : ''}`} onMouseDown={handleMouseDown} style={{
         background: yellowBackgroundGradient
       }}>
         <div className="need-bar__left-highlight"></div>

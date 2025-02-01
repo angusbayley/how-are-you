@@ -13,7 +13,8 @@
   cursor: pointer;
 }
 
-.need-bar__bar:hover {
+.need-bar__bar:hover,
+.need-bar__bar.active {
   box-shadow: 4px 4px 7px rgba(0,0,0,0.4);
 }
 
