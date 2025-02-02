@@ -35,14 +35,18 @@ const OverallMoodGauge = (props: PropsType) => {
           style={{height: `${positiveHeight}%`}}
         />
         <div className="overall-mood-gauge__positive-reflection-spot"/>
-        <div className="overall-mood-gauge__positive-reflection-line"/>
+        <div className="overall-mood-gauge__positive-reflection-line-container">
+          <div className="overall-mood-gauge__positive-reflection-line"/>
+        </div>
       </div>
       <div className="overall-mood-gauge__negative-container">
         <div
           className="overall-mood-gauge__negative"
           style={{height: `${negativeHeight}%`}}
         />
-        <div className="overall-mood-gauge__negative-reflection-line"/>
+        <div className="overall-mood-gauge__negative-reflection-line-container">
+          <div className="overall-mood-gauge__negative-reflection-line"/>
+        </div>
       </div>
     </div>
   )

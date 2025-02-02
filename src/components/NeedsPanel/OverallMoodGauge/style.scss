@@ -38,10 +38,19 @@
   border-radius: 1000px;
 }
 
+.overall-mood-gauge__positive-reflection-line-container {
+  position: absolute;
+  top: 10px;
+  left: -40px;
+  width: 200px;
+  height: 235px;
+  overflow: hidden;
+}
+
 .overall-mood-gauge__positive-reflection-line {
   position: absolute;
-  top: 20px;
-  left: -180px;
+  top: 10px;
+  left: -140px;
   width: 200px;
   height: 235px;
   background: rgba(255,255,255,0.2);
@@ -50,10 +59,19 @@
   transform: rotate(-1deg)
 }
 
-.overall-mood-gauge__negative-reflection-line {
+.overall-mood-gauge__negative-reflection-line-container {
   position: absolute;
   top: 133px;
-  left: -100px;
+  left: 50px;
+  width: 210px;
+  height: 120px;
+  overflow: hidden;
+}
+
+.overall-mood-gauge__negative-reflection-line {
+  position: absolute;
+  top: 0px;
+  left: -150px;
   width: 200px;
   height: 235px;
   background: rgba(255,255,255,0.2);
