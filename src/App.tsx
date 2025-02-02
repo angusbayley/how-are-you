@@ -14,14 +14,12 @@ function App() {
         margin: 0,
         padding: 0
       }
-    })
-        .then(function (dataUrl) {
+    }).then(function (dataUrl) {
       var link = document.createElement('a');
       link.download = 'my-image-name.jpeg';
       link.href = dataUrl;
       link.click();
     });
-
   }
 
   return (

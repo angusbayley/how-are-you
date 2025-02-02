@@ -94,11 +94,7 @@ const NeedBar = (props: { state: NeedStateType }) => {
   const yellowBackgroundGradient = `linear-gradient(0deg, rgba(${ydr}, ${ydg}, ${ydb}, 1) 0%, rgba(${ylr}, ${ylg}, ${ylb}, 1) 40%)`
 
   return (
-    <div className="need-bar__body"
-      // onMouseUp={handleOnMouseUp}
-      // onMouseMove={handleMouseMove}
-      >
-      
+    <div className="need-bar__body">
       <div className={`need-bar__bar ${isMouseDown ? 'active' : ''}`} onMouseDown={handleMouseDown} style={{
         background: yellowBackgroundGradient
       }}>
