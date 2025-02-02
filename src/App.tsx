@@ -16,7 +16,7 @@ function App() {
       }
     }).then(function (dataUrl) {
       var link = document.createElement('a');
-      link.download = 'my-image-name.jpeg';
+      link.download = 'needs.jpeg';
       link.href = dataUrl;
       link.click();
     });

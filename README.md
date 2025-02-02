@@ -7,7 +7,7 @@
 [ ] algorithm should be logit-function'd
 [ ] throttle mousemove events/sync state to browser refresh
 [ ] gross blue background
-[ ] (make sure it works with screenshot in dark mode)
+[x] (make sure it works with screenshot in dark mode)
 
 We have a problem with talking about our feelings. We're too shy to say what we really mean. We can't find the words. So we end up cloaking the complexity of our mood underneath platitudes.
 
