@@ -6,6 +6,7 @@
 [x] needbar hover should stay active when click-dragging
 [ ] algorithm should be logit-function'd
 [ ] throttle mousemove events/sync state to browser refresh
+[ ] needbar goes through green yellow red
 [x] gross blue background
 [x] (make sure it works with screenshot in dark mode)
 
