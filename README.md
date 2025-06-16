@@ -1,13 +1,16 @@
 # How are you
 
-<img width="525" alt="Screenshot 2025-06-16 at 13 49 11" src="https://github.com/user-attachments/assets/b94582ea-a979-4b59-a7a8-d43c1156fc93" />
+<img width="400" alt="Screenshot 2025-06-16 at 13 49 11" src="https://github.com/user-attachments/assets/b94582ea-a979-4b59-a7a8-d43c1156fc93" />
 
-We need a new interface for sharing how we feel. One that doesn't rely on words. Thankfully this problem was solved in the early 2000s, when Maxxis technologies invented the definitive parameter set to describe human emotions.
+We need a new interface for sharing how we really feel, with all its complexities. Thankfully this problem was solved in the early 2000s, when Maxxis technologies invented the definitive parameter set to describe human emotions.
 
-[Screenshot of sims bar]
+<img width="792" alt="Screenshot 2025-06-16 at 14 29 43" src="https://github.com/user-attachments/assets/b7124c62-8aa0-4dd5-9f0b-fc7c755cc02e" />
 
 I bring this to you now in interactive form, so you can finally express yourself.
 
+https://github.com/user-attachments/assets/71e4fc80-774c-4751-8e1c-8767caa79e77
+
+![edit](https://github.com/user-attachments/assets/2e028b9c-d603-4127-a062-772fe99f132d)
 
 
 ## TODO
