@@ -12,7 +12,7 @@ https://github.com/user-attachments/assets/71e4fc80-774c-4751-8e1c-8767caa79e77
 
 ...so you can finally express yourself:
 
-<img width="400" alt="Screenshot 2025-06-16 at 14 29 43" src="https://github.com/user-attachments/assets/2e028b9c-d603-4127-a062-772fe99f132d" />
+<img width="450" alt="Screenshot 2025-06-16 at 14 29 43" src="https://github.com/user-attachments/assets/2e028b9c-d603-4127-a062-772fe99f132d" />
 
 
 ## TODO
