@@ -19,9 +19,9 @@ https://github.com/user-attachments/assets/71e4fc80-774c-4751-8e1c-8767caa79e77
 
 - [x] refactor, state mgmt and prop drilling
 - [x] needbar hover should stay active when click-dragging
-- [ ] algorithm should be logit-function'd
-- [ ] throttle mousemove events/sync state to browser refresh
-- [ ] needbar goes through green yellow red
+- [ ] algorithm should be logit-function'd (optional)
+- [ ] throttle mousemove events/sync state to browser refresh (optional)
+- [x] needbar goes through green yellow red
 - [x] gross blue background
 - [x] (make sure it works with screenshot in dark mode)
 
